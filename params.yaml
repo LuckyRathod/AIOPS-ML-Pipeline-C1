@@ -1,0 +1,14 @@
+base:
+  project: aiops-ml-pipeline-c1
+  random_state : 42
+  target_col : quality
+  test_size : 0.2
+
+data_source:
+  data: https://drive.google.com/u/0/uc?id=1DwJRVM5rZ1pfO3vpQy_hJzzZBrmXHIon&export=download
+
+artifacts:
+  artifacts_dir : artifacts
+  raw_local_data_dir : artifacts/raw_local_data_dir
+  raw_local_data : artifacts/raw_local_data_dir/data.csv
+ 

@@ -12,8 +12,9 @@ setup(
     long_description_content_type ="text/markdown",
     url="https://github.com/LuckyRathod/AIOPS-ML-Pipeline-C1",
     author_email="luckyrathod46@gmail.com",
-    package_dir={"":"src"},
-    packages=find_packages(where="src"),license="GNU",
+    #package_dir={"":"src"},
+    #packages=find_packages(where="src"),license="GNU",
+    packages=["src"],
     python_requires=">=3.6",
     install_requires=[
         'dvc',
