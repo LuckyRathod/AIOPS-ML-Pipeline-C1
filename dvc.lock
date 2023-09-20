@@ -1,0 +1,22 @@
+schema: '2.0'
+stages:
+  load_data:
+    cmd: python src/stage_01_load_and_save.py --config=params.yaml
+    deps:
+    - path: src/stage_01_load_and_save.py
+      hash: md5
+      md5: ec3868f5c1f78066f82fb818a20bd63b
+      size: 1173
+    - path: src/utils/common_utils.py
+      hash: md5
+      md5: 22891449777994c2c3fcc7cebd7f660b
+      size: 951
+    params:
+      params.yaml:
+        artifacts.raw_local_data: artifacts/raw_local_data_dir/data.csv
+        data_source.data: others/data_set/winequality-red.csv
+    outs:
+    - path: artifacts/raw_local_data_dir/data.csv
+      hash: md5
+      md5: 7c92f1ee593c0fbd2ad8c67ba5c446df
+      size: 91999

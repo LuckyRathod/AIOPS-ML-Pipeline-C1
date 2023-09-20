@@ -5,7 +5,7 @@ base:
   test_size : 0.2
 
 data_source:
-  data: https://drive.google.com/u/0/uc?id=1DwJRVM5rZ1pfO3vpQy_hJzzZBrmXHIon&export=download
+  data: others/data_set/winequality-red.csv
 
 artifacts:
   artifacts_dir : artifacts
