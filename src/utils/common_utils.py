@@ -4,6 +4,7 @@ import shutil
 import logging
 import json
 
+
 def read_params(config_path: str) -> dict:
     with open(config_path) as yaml_file:
         config = yaml.safe_load(yaml_file)
@@ -31,3 +32,10 @@ def save_local_df(df, df_path, header=False):
     else:
         df.to_csv(df_path, index=False)
         logging.info(f"dataframe saved at {df_path}")  
+    
+
+def save_reports(filepath: str, report: dict):
+    with open(filepath, "w") as f:
+        json.dump(report, f, indent=4)
+    logging.info(f"details of the report: {report}")
+    logging.info(f"reports saved at {filepath}")
